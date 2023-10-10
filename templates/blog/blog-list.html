@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h3>Blogs</h3>
+        <hr>
+        {% for Blog in object_list %}
+            <h4>{{Blog.title}}</h4>
+            <p>{{Blog.description}}</p>
+            <div>
+                {{Blog.author}}|
+                {{Blog.pub_date}}
+            </div>
+        {% endfor %}
+    </body>
+    </html>
+{% endblock content %}
+

@@ -6,3 +6,8 @@ class BlogList(ListView):
     queryset = Blog.objects.all()
     context_object_name = 'object_list'
     template_name = 'blog/blog-list.html'
+
+class BlogDetail(DetailView):
+    model = Blog
+    context_object_name = 'objects'
+    template_name = 'blog/blog-detail.html'

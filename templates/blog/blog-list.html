@@ -11,12 +11,8 @@
         <h3>Blogs</h3>
         <hr>
         {% for Blog in object_list %}
-            <h4>{{Blog.title}}</h4>
-            <p>{{Blog.description}}</p>
-            <div>
-                {{Blog.author}}|
-                {{Blog.pub_date}}
-            </div>
+           <a href="{% url 'blog-detail' Blog.pk %}">{{Blog.title}}</a>
+           <hr>
         {% endfor %}
     </body>
     </html>

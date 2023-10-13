@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.views.generic import (ListView,DetailView,CreateView)
 from .models import Blog
 from django.views.generic.edit import UpdateView,DeleteView
+from django.urls import reverse,reverse_lazy
 # Create your views here.
 class BlogList(ListView):
     queryset = Blog.objects.all()
@@ -18,4 +19,6 @@ class BlogCreate(CreateView):
     fields = ['title','description','author']
     context_object_name = 'objects-create'
     template_name = 'blog/blog-create.html'
+    success_url = reverse_lazy ('blog-list')
+    
 

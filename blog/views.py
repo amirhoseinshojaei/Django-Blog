@@ -18,4 +18,4 @@ class BlogCreate(CreateView):
     fields = ['title','description','author']
     context_object_name = 'objects-create'
     template_name = 'blog/blog-create.html'
-    # To do : complete security
+

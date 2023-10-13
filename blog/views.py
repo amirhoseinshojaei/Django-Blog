@@ -20,5 +20,17 @@ class BlogCreate(CreateView):
     context_object_name = 'objects-create'
     template_name = 'blog/blog-create.html'
     success_url = reverse_lazy ('blog-list')
+
+class BlogUpdate(UpdateView):
+    model = Blog
+    fields = ['title','description','author']
+    context_object_name = 'objects-update'
+    template_name = 'blog/blog-update.html'
+    success_url = reverse_lazy ('blog-list')
+
+class BlogDelete(DeleteView):
+    model = Blog
+    success_url = reverse_lazy ('blog-list')
+    template_name = 'blog/blog-delet.html'
     
 

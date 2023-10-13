@@ -10,8 +10,8 @@
     <body>
         <form action="" method="post">{% csrf_token %}
             {{form.as_p}}
+            <h4>Are you sure delet this blog</h4><button type="submit">Delet</button>
         </form>
-        <h4>Are you sure delet this blog</h4><button type="submit">Delet</button>
     </body>
     </html>
 {% endblock content %}

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Blog
+from .models import Blog,Comment
 # Register your models here.
 class BlogAdmin(admin.ModelAdmin):
     list_display = ['title','author','pub_date']
@@ -9,3 +9,4 @@ class BlogAdmin(admin.ModelAdmin):
     date_hierarchy = "pub_date"
 
 admin.site.register(Blog,BlogAdmin)
+admin.site.register(Comment)

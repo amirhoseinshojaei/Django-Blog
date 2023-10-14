@@ -12,7 +12,7 @@ class Blog(models.Model):
         return self.title
     
 class Comment(models.Model):
-    Blog = models.ForeignKey(Blog,related_name='comments',on_delete=models.CASCADE)
+    blog = models.ForeignKey(Blog,related_name='comments',on_delete=models.CASCADE)
     name = models.CharField(max_length=55)
     author = models.ForeignKey(User,on_delete=models.CASCADE)
     comment = models.TextField(max_length=670)

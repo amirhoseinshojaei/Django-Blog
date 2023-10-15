@@ -4,7 +4,7 @@ from .models import Comment
 class CommentForm(forms.ModelForm):
     class Mete:
         model = Comment
-        fields = ['name','author','comment']
+        fields = ('name','author','comment')
         widgets={
             'blog':forms.HiddenInput(),
             'author': forms.HiddenInput()

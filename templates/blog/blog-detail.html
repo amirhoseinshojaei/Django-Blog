@@ -16,15 +16,15 @@
         </div>
         <hr>
         <div>
-            {% for Comment in object %}
-                {{object.comment}}
-                <h5>{{comment.name}}</h5>
+            {% for Comment in object.comments.all %}
+            <b>{{Comment.author}}|{{Comment.comment}}</b>
             {% endfor %}
+            
+                <form action="" method="post">{% csrf_token %}
+                    {{form.as_p}}
+                    <button type="submit">Comment</button>
+                </form>
         </div>
-        <form action="" method="post">{% csrf_token %}
-            {{form.as_p}}
-            <button type="submit">submit</button>
-        </form>
     </body>
     </html>
 {% endblock content %}

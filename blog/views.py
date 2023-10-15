@@ -42,9 +42,6 @@ class BlogDetail(LoginRequiredMixin, DetailView):
         
         return self.render_to_response(self.get_context_data(form=form))
 
-    
-
-
 class BlogCreate(LoginRequiredMixin,CreateView):
     model = Blog
     fields = ['title','description']

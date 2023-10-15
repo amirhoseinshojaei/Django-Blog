@@ -1,11 +1,14 @@
+from typing import Any
 from django.forms.models import BaseModelForm
 from django.http import HttpResponse
 from django.shortcuts import render,redirect
 from django.views.generic import (ListView,DetailView,CreateView)
-from .models import Blog
+from .models import Blog,Comment
+from .forms import CommentForm
 from django.views.generic.edit import UpdateView,DeleteView
 from django.urls import reverse,reverse_lazy
 from django.contrib.auth.mixins import LoginRequiredMixin,UserPassesTestMixin
+from django.shortcuts import redirect
 # Create your views here.
 class BlogList(ListView):
     queryset = Blog.objects.all()
@@ -16,6 +19,27 @@ class BlogDetail(LoginRequiredMixin,DetailView):
     model = Blog
     context_object_name = 'objects'
     template_name = 'blog/blog-detail.html'
+    form_class = CommentForm
+    def get_success_url(self):
+        return reverse('blog-detail',kwargs={'pk':self.object.pk})
+    
+    def get_context_data(self, **kwargs):
+        return super().get_context_data(**kwargs)
+        context['form'] = CommentForm(initial={'blog':self.object,'author':self.request.user})
+        return context
+    
+    def Post(self,request,*args,**kwargs):
+        self.object = self.get_object()
+        form = CommentForm()
+        if form.is_valid():
+            comment = form.save(commit=False)
+            Comment.blog = self.object
+            Comment.author = self.request.user
+            Comment.save()
+            return redirect(self.get_success_url())
+        return self.render_to_response(self.get_context_data(form=form))
+    
+
 
 class BlogCreate(LoginRequiredMixin,CreateView):
     model = Blog

@@ -15,29 +15,33 @@ class BlogList(ListView):
     context_object_name = 'object_list'
     template_name = 'blog/blog-list.html'
 
-class BlogDetail(LoginRequiredMixin,DetailView):
+class BlogDetail(LoginRequiredMixin, DetailView):
     model = Blog
     context_object_name = 'objects'
     template_name = 'blog/blog-detail.html'
     form_class = CommentForm
+    
     def get_success_url(self):
-        return reverse('blog-detail',kwargs={'pk':self.object.pk})
+        return reverse('blog-detail', kwargs={'pk': self.object.pk})
     
     def get_context_data(self, **kwargs):
-        return super().get_context_data(**kwargs)
-        context['form'] = CommentForm(initial={'blog':self.object,'author':self.request.user})
+        context = super().get_context_data(**kwargs)
+        context['form'] = CommentForm(initial={'blog': self.object, 'author': self.request.user})
         return context
     
-    def Post(self,request,*args,**kwargs):
+    def post(self, request, *args, **kwargs):  # Use lowercase "post"
         self.object = self.get_object()
-        form = CommentForm()
+        form = CommentForm(request.POST)  # Use request.POST
+        
         if form.is_valid():
             comment = form.save(commit=False)
-            Comment.blog = self.object
-            Comment.author = self.request.user
-            Comment.save()
+            comment.blog = self.object  # Set the comment's blog attribute
+            comment.author = self.request.user  # Set the comment's author attribute
+            comment.save()  # Save the comment
             return redirect(self.get_success_url())
+        
         return self.render_to_response(self.get_context_data(form=form))
+
     
 
 

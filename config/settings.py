@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     "blog.apps.BlogConfig",
-    "accounts.app.AccountsConfig",
+    "accounts.apps.AccountsConfig",
 ]
 
 MIDDLEWARE = [
@@ -127,3 +127,4 @@ STATICFILES_DIRS =  [BASE_DIR.joinpath('static')]
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = 'blog-list'
 LOGOUT_REDIRECT_URL = 'blog-list'
+AUTH_USER_MODEL = 'accounts.CustomUser'

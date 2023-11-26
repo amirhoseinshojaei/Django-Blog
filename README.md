@@ -4,59 +4,59 @@ https://github.com/amirhoseinshojaei/Django-Blog/blob/main/LICENSE
 
 Table of Contents
 
-About the Project
-Getting Started
-Prerequisites
-Installation
-Features
-Contributing
-License
-Contact
+    About the Project
+    Getting Started
+    Prerequisites
+    Installation
+    Features
+    Contributing
+    License
+    Contact
 
 About the Project
 
-Welcome to BlogXpress, a dynamic and user-friendly blog website built using the Django framework! Express yourself, share your ideas, and connect with readers through the power of words. BlogXpress provides a seamless platform for writers, bloggers, and content creators to craft, publish, and manage their articles effortlessly.
+    Welcome to BlogXpress, a dynamic and user-friendly blog website built using the Django framework! Express yourself, share your ideas, and connect with readers through the power of words. BlogXpress provides a seamless platform for writers,     bloggers, and content creators to craft, publish, and manage their articles effortlessly.
 
 Built With
 
-https://www.djangoproject.com/- The web framework for perfectionists with deadlines.
-https://getbootstrap.com/- The world’s most popular front-end open-source toolkit.
-https://www.sqlite.org/- A C library that provides a lightweight disk-based database.
+    https://www.djangoproject.com/- The web framework for perfectionists with deadlines.
+    https://getbootstrap.com/- The world’s most popular front-end open-source toolkit.
+    https://www.sqlite.org/- A C library that provides a lightweight disk-based database.
 
 Getting Started
 
-Get BlogXpress up and running on your local machine with these simple steps.
+    Get BlogXpress up and running on your local machine with these simple steps.
 
 Prerequisites
 
-Make sure you have the following installed:
+    Make sure you have the following installed:
 
-https://www.python.org/- Version 3.6 or higher
-https://pip.pypa.io/en/stable/- The package installer for Python
+    https://www.python.org/- Version 3.6 or higher
+    https://pip.pypa.io/en/stable/- The package installer for Python
 
 Installation
 
-git clone https://github.com/amirhoseinshojaei/Django-Blog.git
+    git clone https://github.com/amirhoseinshojaei/Django-Blog.git
 
-Navigate to the project directory
+    Navigate to the project directory
 
-cd Django-Blog
+    cd Django-Blog
 
-pip install -r requirements.txt
+    pip install -r requirements.txt
 
-Apply migrations
+    Apply migrations
 
-python manage.py migrate
+    python manage.py migrate
 
-Create a superuser account
+    Create a superuser account
 
-python manage.py createsuperuser
+    python manage.py createsuperuser
 
-Run the development server
+    Run the development server
 
-python manage.py runserver
+    python manage.py runserver
 
-Visit http://localhost:8000/ in your browser to start blogging!
+    Visit http://localhost:8000/ in your browser to start blogging!
 
 Features
 
@@ -66,7 +66,7 @@ Features
 
 Contributing
 
-Contributions are welcome! Follow these steps to contribute:
+    Contributions are welcome! Follow these steps to contribute:
 
     Fork the Project
     Create your Feature Branch (git checkout -b feature/AmazingFeature)
@@ -76,12 +76,12 @@ Contributions are welcome! Follow these steps to contribute:
 
 License
 
-Distributed under the GPL-3.0 License. See LICENSE for more information.
+    Distributed under the GPL-3.0 License. See LICENSE for more information.
 
 Contact
 
-Amirhoseinshojaei
+    Amirhoseinshojaei
 
-amirhoseinbu80@gmail.com
+    amirhoseinbu80@gmail.com
 
-https://github.com/amirhoseinshojaei/Django-Blog
+    https://github.com/amirhoseinshojaei/Django-Blog

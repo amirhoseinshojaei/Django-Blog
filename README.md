@@ -1,87 +1,85 @@
-BlogXpress
+<img src="https://maxmautner.com/public/images/django.gif" align="center">
 
-https://github.com/amirhoseinshojaei/Django-Blog/blob/main/LICENSE
+# Table of Contents
 
-Table of Contents
+**About the Project**
+**Getting Started**
+**Prerequisites**
+**Installation**
+**Features**
+**Contributing**
+**License**
+**Contact**
 
-    About the Project
-    Getting Started
-    Prerequisites
-    Installation
-    Features
-    Contributing
-    License
-    Contact
+# About the Project
 
-About the Project
+Welcome to BlogXpress, a dynamic and user-friendly blog website built using the Django framework! Express yourself, share your ideas, and connect with readers through the power of words. BlogXpress provides a seamless platform for writers,     bloggers, and content creators to craft, publish, and manage their articles effortlessly.
 
-    Welcome to BlogXpress, a dynamic and user-friendly blog website built using the Django framework! Express yourself, share your ideas, and connect with readers through the power of words. BlogXpress provides a seamless platform for writers,     bloggers, and content creators to craft, publish, and manage their articles effortlessly.
+# Built With
 
-Built With
+https://www.djangoproject.com/- The web framework for perfectionists with deadlines.
+https://getbootstrap.com/- The world’s most popular front-end open-source toolkit.
+https://www.sqlite.org/- A C library that provides a lightweight disk-based database.
 
-    https://www.djangoproject.com/- The web framework for perfectionists with deadlines.
-    https://getbootstrap.com/- The world’s most popular front-end open-source toolkit.
-    https://www.sqlite.org/- A C library that provides a lightweight disk-based database.
+# Getting Started
 
-Getting Started
+Get BlogXpress up and running on your local machine with these simple steps.
 
-    Get BlogXpress up and running on your local machine with these simple steps.
+# Prerequisites
 
-Prerequisites
+**Make sure you have the following installed:**
 
-    Make sure you have the following installed:
+https://www.python.org/- Version 3.6 or higher
+https://pip.pypa.io/en/stable/- The package installer for Python
 
-    https://www.python.org/- Version 3.6 or higher
-    https://pip.pypa.io/en/stable/- The package installer for Python
-
-Installation
+# Installation
 
     git clone https://github.com/amirhoseinshojaei/Django-Blog.git
 
-    Navigate to the project directory
+**Navigate to the project directory**
 
     cd Django-Blog
 
     pip install -r requirements.txt
 
-    Apply migrations
+**Apply migrations**
 
-    python manage.py migrate
+        python manage.py migrate
 
-    Create a superuser account
+**Create a superuser account**
 
-    python manage.py createsuperuser
+        python manage.py createsuperuser
 
-    Run the development server
+**Run the development server**
 
-    python manage.py runserver
+        python manage.py runserver
 
-    Visit http://localhost:8000/ in your browser to start blogging!
+**Visit** http://localhost:8000/ in your browser to start blogging!
 
-Features
+# Features
 
-    Create and manage blog articles with ease.
-    Engage with readers through comments.
-    User-friendly interface for writers and readers.
+Create and manage blog articles with ease.
+Engage with readers through comments.
+User-friendly interface for writers and readers.
 
-Contributing
+# Contributing
 
-    Contributions are welcome! Follow these steps to contribute:
+Contributions are welcome! Follow these steps to contribute:
 
-    Fork the Project
-    Create your Feature Branch (git checkout -b feature/AmazingFeature)
-    Commit your Changes (git commit -m 'Add some AmazingFeature')
-    Push to the Branch (git push origin feature/AmazingFeature)
-    Open a Pull Request
+Fork the Project
+Create your Feature Branch (git checkout -b feature/AmazingFeature)
+Commit your Changes (git commit -m 'Add some AmazingFeature')
+Push to the Branch (git push origin feature/AmazingFeature)
+Open a Pull Request
 
-License
+# License
 
-    Distributed under the GPL-3.0 License. See LICENSE for more information.
+Distributed under the GPL-3.0 License. See LICENSE for more information.
 
-Contact
+# Contact
 
-    Amirhoseinshojaei
+Amirhoseinshojaei
 
-    amirhoseinbu80@gmail.com
+amirhoseinbu80@gmail.com
 
-    https://github.com/amirhoseinshojaei/Django-Blog
+https://github.com/amirhoseinshojaei/Django-Blog
